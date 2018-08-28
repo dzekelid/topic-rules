@@ -1,9 +1,11 @@
+---
 swagger: "2.0"
 x-collection-name: AWS Internet of Things
-x-complete: 1
+x-complete: 0
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API Enable Topic Rule
   version: 1.0.0
+  description: Enables the specified rule.
 schemes:
 - http
 produces:
@@ -79,67 +81,17 @@ paths:
           description: OK
       tags:
       - Topic Rules
-  /?Action=GetTopicRule:
-    get:
-      summary: Get Topic Rule
-      description: Gets information about the specified rule.
-      operationId: getTopicRule
-      x-api-path-slug: actiongettopicrule-get
-      parameters:
-      - in: query
-        name: ruleName
-        description: The name of the rule
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Topic Rules
-  /?Action=ListTopicRules:
-    get:
-      summary: List Topic Rules
-      description: Lists the rules for the specific topic.
-      operationId: listTopicRules
-      x-api-path-slug: actionlisttopicrules-get
-      parameters:
-      - in: query
-        name: maxResults
-        description: The maximum number of results to return
-        type: string
-      - in: query
-        name: nextToken
-        description: A token used to retrieve the next value
-        type: string
-      - in: query
-        name: ruleDisabled
-        description: Specifies whether the rule is disabled
-        type: string
-      - in: query
-        name: topic
-        description: The topic
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Topic Rules
-  /?Action=ReplaceTopicRule:
-    get:
-      summary: Replace Topic Rule
-      description: Replaces the specified rule.
-      operationId: replaceTopicRule
-      x-api-path-slug: actionreplacetopicrule-get
-      parameters:
-      - in: query
-        name: ruleName
-        description: The name of the rule
-        type: string
-      - in: query
-        name: topicRulePayload
-        description: The rule payload
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Topic Rules
+x-streamrank:
+  polling_total_time_average: 0
+  polling_size_download_average: 0
+  streaming_total_time_average: 0
+  streaming_size_download_average: 0
+  change_yes: 0
+  change_no: 0
+  time_percentage: 0
+  size_percentage: 0
+  change_percentage: 0
+  last_run: ""
+  days_run: 0
+  minute_run: 0
+---
